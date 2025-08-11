@@ -88,7 +88,7 @@ window.projectData = {
     description: 'Website cá nhân responsive, dark mode, tối ưu SEO, CI/CD triển khai Vercel.',
     features: ['Giao diện responsive', 'Dark/Light mode', 'Tối ưu SEO (Lighthouse > 90)', 'CI/CD với Vercel'],
     technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
-    github: 'https://github.com/yourname/portfolio',
-    demo: 'https://yourportfolio.com'
+    github: 'https://github.com/dkhoa05/myPortfolio',
+    demo: 'https://dkhoa05.github.io/myPortfolio/'
   }
 };
