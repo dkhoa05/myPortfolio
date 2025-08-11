@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Edge - Live Server",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": true
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Chrome - Live Server",
+      "url": "http://127.0.0.1:5500/index.html",
+      "webRoot": "${workspaceFolder}",
+      "userDataDir": true
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Edge - Open file",
+      "file": "${workspaceFolder}/index.html",
+      "userDataDir": true
+    }
+  ]
+}

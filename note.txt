@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trần Đăng Khoa</title>
+  <meta name="description" content="Trần Đăng Khoa — Software Engineering Intern Portfolio. Sinh viên Công nghệ Thông tin | Software Engineering Intern." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Trần Đăng Khoa — Software Engineering Intern Portfolio" />
+  <meta property="og:description" content="Sinh viên Công nghệ Thông tin | Software Engineering Intern." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourportfolio.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind config (tách riêng) -->
+  <script src="/assets/js/tailwind-config.js"></script>
+
+  <!-- Icons + Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body class="bg-bgLight dark:bg-bgDark text-text dark:text-white transition-colors duration-300">
+  <!-- Skip to main content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-md z-50">Bỏ qua đến nội dung chính</a>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-40 glass-effect">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold gradient-text">Profile</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Trang chủ</a>
+        <a href="#skills" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Kỹ năng</a>
+        <a href="#projects" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Dự án</a>
+        <a href="#contact" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Liên hệ</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" class="p-2 rounded-lg hover:bg-white/40 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Chuyển chế độ tối">
+          <i class="fas fa-moon dark:hidden"></i>
+          <i class="fas fa-sun hidden dark:block"></i>
+        </button>
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-white/40 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Mở menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-bgLight dark:bg-gray-800 border-t border-white/10 dark:border-white/10">
+      <div class="px-4 py-2 space-y-2">
+        <a href="#hero" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Trang chủ</a>
+        <a href="#skills" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Kỹ năng</a>
+        <a href="#projects" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Dự án</a>
+        <a href="#contact" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Liên hệ</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex items-center justify-center hero-bg relative overflow-hidden pt-16">
+      <!-- soft floating blobs -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-white rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full animate-float" style="animation-delay:1s"></div>
+      </div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="animate-fade-in">
+          <!-- Avatar -->
+          <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-2xl animate-glow flex items-center justify-center bg-gradient-to-br from-primary to-accent text-white text-4xl font-bold">NA</div>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-slide-up">Trần Đăng Khoa</h1>
+          <p class="text-xl md:text-2xl text-white/90 mb-6 animate-slide-up" style="animation-delay:.15s">Sinh viên Công nghệ Thông tin | Software Engineering Intern</p>
+          <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto animate-slide-up" style="animation-delay:.3s">Sinh viên năm 3 Công nghệ Thông tin, có kinh nghiệm thực hành React, Node.js, Android (Java).
+  Mong muốn tham gia kỳ thực tập để áp dụng kiến thức và học hỏi từ môi trường doanh nghiệp.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay:.45s">
+            <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50">Xem dự án</a>
+            <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50">Liên hệ</a>
+            <a href="/cv.pdf" download class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 flex items-center justify-center gap-2"><i class="fas fa-download"></i>Tải CV</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-gentle">
+        <a href="#skills" class="text-white hover:text-gray-200" aria-label="Cuộn xuống phần kỹ năng"><i class="fas fa-chevron-down text-2xl"></i></a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+<section id="skills" class="py-20 bg-white/60 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text animate-slide-up">Kỹ năng & Chuyên môn</h2>
+      <p class="text-textSecondary dark:text-gray-300 max-w-2xl mx-auto animate-slide-up" style="animation-delay:.15s">
+        Mức độ thành thạo & trải nghiệm thực tế (không dùng số %)
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 1) Programming & Mobile -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-mobile-alt text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Programming & Mobile</h3>
+        </div>
+
+        <!-- Java -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-java"></i><span class="font-medium">Java</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            OOP, REST API cơ bản, unit test, error handling.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">2 projects</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Collections/I/O</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Gradle/Maven</span>
+          </div>
+        </div>
+
+        <!-- Android -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-robot"></i><span class="font-medium">Android (Java)</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            SQLite, RecyclerView, ViewModel/Lifecycle, form validation.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">1 app hoàn chỉnh</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Offline-first</span>
+          </div>
+        </div>
+
+        <!-- Git -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-git-alt"></i><span class="font-medium">Git/GitHub</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Advanced</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Git flow, PR review, branching, basic GitHub Actions.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">>20 PRs</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Code Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Frontend -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fab fa-react text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Frontend</h3>
+        </div>
+
+        <!-- React/Next -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-react"></i><span class="font-medium">React / Next.js</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Advanced</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            SPA/SSR, routing, hooks, tối ưu hiệu năng & SEO.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">3 projects</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Auth • Forms • API</span>
+          </div>
+        </div>
+
+        <!-- TypeScript -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-code"></i><span class="font-medium">TypeScript</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Types, generics, strict mode, lint & refactor an toàn.
+          </p>
+        </div>
+
+        <!-- Vue/Nuxt -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-vuejs"></i><span class="font-medium">Vue / Nuxt</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Familiar</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Composition API, file-based routing, server routes.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3) Backend & DevOps -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-server text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Backend & DevOps</h3>
+        </div>
+
+        <!-- Node/Express -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-node-js"></i><span class="font-medium">Node.js / Express</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            REST API, auth (JWT), middleware, validation, logging.
+          </p>
+        </div>
+
+        <!-- DB -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-database"></i><span class="font-medium">MongoDB / PostgreSQL</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Thiết kế schema, index cơ bản, ORM/ODM, query tối ưu nhẹ.
+          </p>
+        </div>
+
+        <!-- DevOps -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-docker"></i><span class="font-medium">AWS · Docker · CI/CD</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Familiar</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Dockerize app, deploy cơ bản (EC2/Vercel), pipeline CI/CD đơn giản.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4) Styling -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-paint-brush text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Styling</h3>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-wand-magic-sparkles"></i><span class="font-medium">Tailwind CSS</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Advanced</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Design system, responsive, dark mode, component-first.
+          </p>
+        </div>
+
+        <!-- CSS/SCSS -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-hashtag"></i><span class="font-medium">CSS / SCSS</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Flex/Grid, animation, accessible focus states.
+          </p>
+        </div>
+
+        <!-- Framer Motion -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-bolt"></i><span class="font-medium">Framer Motion</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Familiar</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Reveal/entrance, layout animation, gestures cơ bản.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6) Testing & QA -->
+<div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+  <div class="flex items-center mb-4">
+    <i class="fas fa-vial text-3xl text-accent mr-3"></i>
+    <h3 class="text-xl font-semibold">Testing & QA</h3>
+  </div>
+
+  <div class="space-y-5">
+    <div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium"><i class="fas fa-check-circle mr-2"></i>Unit Testing</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+      </div>
+      <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+        JUnit, Mockito, test coverage cơ bản.
+      </p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium"><i class="fas fa-bug mr-2"></i>Debugging</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Strong</span>
+      </div>
+      <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+        Phân tích log, breakpoint, fix bug theo priority.
+      </p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium"><i class="fas fa-clipboard-check mr-2"></i>Code Quality</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Good</span>
+      </div>
+      <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+        Code review, lint, refactor để giữ clean code.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- 5) Soft Skills -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-user-friends text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Soft Skills</h3>
+        </div>
+
+        <div class="space-y-5">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium"><i class="fas fa-users mr-2"></i>Teamwork</span>
+              <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Strong</span>
+            </div>
+            <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+              Làm việc nhóm với GitHub/Trello; giao tiếp, phân chia task rõ ràng.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium"><i class="fas fa-comment-dots mr-2"></i>Communication</span>
+              <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Good</span>
+            </div>
+            <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+              Báo cáo tiến độ, viết README, trình bày giải pháp ngắn gọn.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium"><i class="fas fa-lightbulb mr-2"></i>Problem‑solving</span>
+              <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Good</span>
+            </div>
+            <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+              Phân tích yêu cầu, debug có hệ thống, ưu tiên giải pháp đơn giản trước.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-bgLight dark:bg-bgDark">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text animate-slide-up">Dự án tiêu biểu</h2>
+          <p class="text-textSecondary dark:text-gray-300 max-w-2xl mx-auto animate-slide-up" style="animation-delay:.15s">Tuyển tập các sản phẩm gần đây</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up" style="animation-delay:.3s">
+          <button class="filter-btn active px-5 py-2 rounded-full bg-primary text-white hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-primary" data-filter="all">Tất cả</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="react">React</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="vue">Vue</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="mobile">Mobile</button>
+        </div>
+
+        <!-- Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Cards (giữ onclick để mở modal) -->
+          <!-- E-Commerce Platform -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="react fullstack" data-tags="react,fullstack" onclick="openProjectModal('ecommerce')">
+            <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center"><i class="fas fa-shopping-cart text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3><p class="text-textSecondary dark:text-gray-300">Giải pháp TMĐT full-stack: xác thực, giỏ hàng, thanh toán Stripe, quản lý đơn.</p></div>
+          </div>
+
+          <!-- Task Management App -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="react mobile" data-tags="react,frontend" onclick="openProjectModal('taskmanager')">
+            <div class="h-48 bg-gradient-to-br from-accent to-primary flex items-center justify-center"><i class="fas fa-tasks text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Task Management App</h3><p class="text-textSecondary dark:text-gray-300">Ứng dụng quản lý công việc realtime, PWA, kéo-thả.</p></div>
+          </div>
+
+          <!-- Analytics Dashboard -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="fullstack react" data-tags="fullstack,react" onclick="openProjectModal('analytics')">
+            <div class="h-48 bg-gradient-to-br from-primary via-accent to-primary flex items-center justify-center"><i class="fas fa-chart-line text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3><p class="text-textSecondary dark:text-gray-300">Dashboard phân tích realtime, biểu đồ tương tác, báo cáo.</p></div>
+          </div>
+
+          <!-- E-commerce (Next.js) -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="react" data-tags="react,frontend" onclick="openProjectModal('project1')">
+            <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center"><i class="fas fa-laptop-code text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">E-commerce (Next.js)</h3><p class="text-textSecondary dark:text-gray-300">Nền tảng TMĐT với Next.js, SEO tốt, giỏ hàng realtime.</p></div>
+          </div>
+
+          <!-- Learning Management -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="vue" data-tags="vue,frontend" onclick="openProjectModal('project2')">
+            <div class="h-48 bg-gradient-to-br from-accent to-primary flex items-center justify-center"><i class="fas fa-graduation-cap text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Learning Management</h3><p class="text-textSecondary dark:text-gray-300">LMS với Nuxt, video streaming, quiz tương tác.</p></div>
+          </div>
+
+          <!-- Data Analytics -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="fullstack" data-tags="fullstack,react" onclick="openProjectModal('project3')">
+            <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center"><i class="fas fa-database text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Data Analytics</h3><p class="text-textSecondary dark:text-gray-300">Phân tích dữ liệu với D3.js, export PDF, multi sources.</p></div>
+          </div>
+          
+          <!-- Expense Tracker App (Mobile) -->
+<div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+     data-category="mobile" data-tags="android,java,sqlite" onclick="openProjectModal('expense')">
+  <div class="h-48 bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+    <i class="fas fa-wallet text-6xl text-white opacity-90"></i>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">Expense Tracker App</h3>
+    <p class="text-textSecondary dark:text-gray-300">
+      Ứng dụng quản lý chi tiêu offline-first, lưu SQLite, biểu đồ thống kê.
+    </p>
+  </div>
+</div>
+
+<!-- Chat App (Realtime) -->
+<div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+     data-category="mobile" data-tags="firebase,realtime,java,kotlin" onclick="openProjectModal('chatapp')">
+  <div class="h-48 bg-gradient-to-br from-primary via-accent to-primary flex items-center justify-center">
+    <i class="fas fa-comments text-6xl text-white opacity-90"></i>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">Chat App (Realtime)</h3>
+    <p class="text-textSecondary dark:text-gray-300">
+      Chat realtime Firebase (Auth, Firestore, Storage), gửi ảnh, thông báo đẩy.
+    </p>
+  </div>
+</div>
+
+<!-- Portfolio Website -->
+<div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+     data-category="react" data-tags="nextjs,tailwind,vercel" onclick="openProjectModal('portfolio')">
+  <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+    <i class="fas fa-globe text-6xl text-white opacity-90"></i>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+    <p class="text-textSecondary dark:text-gray-300">
+      Website cá nhân responsive, dark mode, tối ưu SEO, triển khai Vercel.
+    </p>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+<section id="contact" class="py-20 bg-white/60 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 gradient-text">Liên hệ</h2>
+      <p class="text-textSecondary dark:text-gray-300 max-w-2xl mx-auto">Hãy cùng bàn về dự án tiếp theo của bạn!</p>
+    </div>
+
+    <div class="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Info -->
+      <div class="bg-bgLight dark:bg-bgDark rounded-xl p-6 shadow-sm">
+        <h3 class="text-2xl font-bold mb-6">Kết nối với tôi</h3>
+
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-primary/90 text-white flex items-center justify-center">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold">Email</h4>
+              <a href="mailto:trandangkhoa2020tb@gmail.com"
+                 class="text-textSecondary dark:text-gray-300 hover:text-primary dark:hover:text-accent underline-offset-2 hover:underline">
+                trandangkhoa2020tb@gmail.com
+              </a>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-primary/90 text-white flex items-center justify-center">
+              <i class="fas fa-phone"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold">Điện thoại</h4>
+              <a href="tel:+84907089280"
+                 class="text-textSecondary dark:text-gray-300 hover:text-primary dark:hover:text-accent">
+                +84 907 089 280
+              </a>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-primary/90 text-white flex items-center justify-center">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold">Khu vực</h4>
+              <p class="text-textSecondary dark:text-gray-300">Hồ Chí Minh, Việt Nam</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-8">
+          <h4 class="font-semibold mb-3">Theo dõi tôi</h4>
+          <div class="flex gap-3">
+            <a href="https://github.com/dkhoa05" target="_blank" aria-label="GitHub"
+               class="w-10 h-10 rounded-lg bg-gray-900 text-white flex items-center justify-center hover:opacity-90">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/khoa-%C4%91%C4%83ng-0065a0371/" target="_blank" aria-label="LinkedIn"
+               class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center hover:bg-primaryHover">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:trandangkhoa2020tb@gmail.com" aria-label="Email"
+               class="w-10 h-10 rounded-lg bg-accent text-white flex items-center justify-center hover:opacity-90">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="bg-bgLight dark:bg-bgDark rounded-xl p-6 shadow-sm">
+        <form id="contact-form" class="space-y-5" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="honeypot" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Họ tên <span class="text-red-500">*</span></label>
+            <input id="name" name="name" type="text" required
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                          focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+                   autocomplete="name" />
+            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Vui lòng nhập họ tên.</p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email <span class="text-red-500">*</span></label>
+            <input id="email" name="email" type="email" required
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                          focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+                   autocomplete="email" />
+            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Vui lòng nhập email hợp lệ.</p>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium mb-2">Chủ đề</label>
+            <input id="subject" name="subject" type="text"
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                          focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium mb-2">Tin nhắn <span class="text-red-500">*</span></label>
+            <textarea id="message" name="message" rows="6" required
+                      class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                             focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition resize-y"></textarea>
+            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Vui lòng nhập nội dung.</p>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <p id="form-message" class="text-sm hidden" aria-live="polite"></p>
+            <button id="submit-btn" type="submit"
+                    class="ml-auto inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg
+                           hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-primary/40
+                           disabled:opacity-60 disabled:cursor-not-allowed">
+              <i id="submit-spinner" class="fas fa-spinner fa-spin hidden"></i>
+              <span id="submit-text">Gửi tin nhắn</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-bgDark text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-2 gradient-text">Trần Đăng Khoa</h3>
+      <p class="text-white/70 mb-6">Information Technology</p>
+      <div class="flex justify-center space-x-6 mb-6">
+<a href="https://github.com/dkhoa05" target="_blank" rel="noopener noreferrer" ...>
+        <a href="https://www.linkedin.com/in/khoa-%C4%91%C4%83ng-0065a0371/" target="_blank" class="text-white/70 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
+        <a href="mailto:trandangkhoa2020tb@gmail.com" class="text-white/70 hover:text-white" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+<div class="border-t border-white/10 pt-6 text-white/60">
+  © <span id="y"></span> Trần Đăng Khoa. Tất cả quyền được bảo lưu.
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    </div>
+    <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primaryHover text-white">
+  <i class="fas fa-paper-plane"></i> Liên hệ
+</a>
+
+  </footer>
+
+  <!-- Project Modal (one modal for all) -->
+  <div id="project-modal" role="dialog" aria-modal="true" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="modal-title" class="text-2xl font-bold"></h3>
+          <button id="close-modal" class="text-textSecondary dark:text-gray-400 hover:text-text dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary rounded" aria-label="Đóng modal"><i class="fas fa-times text-xl"></i></button>
+        </div>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (theo thứ tự) -->
+  <script src="/assets/js/data/projects.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/filter.js"></script>
+  <script src="/assets/js/modal.js"></script>
+  <script src="/assets/js/form.js"></script>
+  <script src="/assets/js/analytics.js"></script>
+  <script defer src="/assets/js/data/projects.js"></script>
+  <script defer src="/assets/js/ui.js"></script>
+  <script defer src="/assets/js/filter.js"></script>
+  <script defer src="/assets/js/modal.js"></script>
+  <script defer src="/assets/js/form.js"></script>
+  <script defer src="/assets/js/analytics.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+</body>
+</html>
+// Modal logic
+const projectModal = document.getElementById('project-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalContent = document.getElementById('modal-content');
+const closeModalBtn = document.getElementById('close-modal');
+
+function trapFocus(el){
+  const focusable = el.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])');
+  const first = focusable[0]; const last = focusable[focusable.length-1];
+  el.addEventListener('keydown', (e)=>{
+    if(e.key==='Tab'){
+      if(e.shiftKey){ if(document.activeElement===first){ last.focus(); e.preventDefault(); } }
+      else { if(document.activeElement===last){ first.focus(); e.preventDefault(); } }
+    }
+  });
+}
+
+function openProjectModal(id){
+  const p = window.projectData?.[id];
+  if(!p) return;
+  modalTitle.textContent = p.title;
+  modalContent.innerHTML = `
+    <div class="space-y-6">
+      <p class="text-textSecondary dark:text-gray-300 text-lg">${p.description}</p>
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Tính năng chính</h4>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+          ${(p.features || []).map(f =>
+            `<li class='flex items-center text-textSecondary dark:text-gray-300'><i class="fas fa-check text-accent mr-2"></i>${f}</li>`
+          ).join('')}
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Công nghệ</h4>
+        <div class="flex flex-wrap gap-2">
+          ${(p.technologies || []).map(t =>
+            `<span class='px-3 py-1 rounded-full text-accent bg-[rgba(46,139,192,0.12)] text-sm'>${t}</span>`
+          ).join('')}
+        </div>
+      </div>
+      <div class="flex gap-4 pt-4">
+        <a href="${p.github}" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center"><i class="fab fa-github mr-2"></i>Mã nguồn</a>
+        <a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primaryHover transition-colors flex items-center"><i class="fas fa-external-link-alt mr-2"></i>Live Demo</a>
+      </div>
+    </div>
+  `;
+  projectModal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  trapFocus(projectModal);
+  closeModalBtn.focus();
+}
+
+// Expose to inline onclick in cards
+window.openProjectModal = openProjectModal;
+
+// Close behaviors
+closeModalBtn?.addEventListener('click', () => {
+  projectModal.classList.add('hidden');
+  document.body.style.overflow='auto';
+});
+
+projectModal?.addEventListener('click', (e)=>{
+  if(e.target === projectModal){
+    projectModal.classList.add('hidden');
+    document.body.style.overflow='auto';
+  }
+});
+
+document.addEventListener('keydown', (e)=>{
+  if(e.key==='Escape' && !projectModal.classList.contains('hidden')){
+    projectModal.classList.add('hidden');
+    document.body.style.overflow='auto';
+  }
+});
+const demoBtn = modal.querySelector('#modal-demo');
+if (!data.demo) demoBtn.classList.add('hidden'); else demoBtn.classList.remove('hidden');
+// Dữ liệu modal dự án (global)
+window.projectData = {
+  ecommerce: {
+    title: 'E-Commerce Platform',
+    description: 'Giải pháp TMĐT đầy đủ tính năng: đăng ký/đăng nhập, catalog, giỏ hàng, thanh toán Stripe, quản trị kho.',
+    features: [
+      'Đăng ký/Đăng nhập (JWT)',
+      'Danh mục sản phẩm + tìm kiếm/lọc',
+      'Giỏ hàng & wishlist',
+      'Thanh toán Stripe an toàn',
+      'Theo dõi đơn & email thông báo',
+      'Admin dashboard quản lý tồn kho',
+      'Responsive mọi thiết bị'
+    ],
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  taskmanager: {
+    title: 'Task Management App',
+    description: 'Ứng dụng quản lý công việc realtime, kéo-thả, hỗ trợ PWA cho trải nghiệm mobile.',
+    features: [
+      'Kéo-thả sắp xếp',
+      'Cộng tác thời gian thực',
+      'Nhắc hạn & thông báo',
+      'Offline-first (PWA)',
+      'Dark/Light theme'
+    ],
+    technologies: ['React','Firebase','PWA','WebSocket','Service Workers'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  analytics: {
+    title: 'Analytics Dashboard',
+    description: 'Dashboard trực quan, realtime insight với biểu đồ tương tác & báo cáo tuỳ chỉnh.',
+    features: [
+      'Biểu đồ tương tác',
+      'Bộ lọc đa chiều',
+      'Xuất báo cáo PDF/Excel',
+      'Phân quyền theo vai trò',
+      'Thiết kế responsive'
+    ],
+    technologies: ['Next.js','Chart.js','PostgreSQL','Prisma','TypeScript','Tailwind'],
+    github: 'https://github.com',
+    demo: 'https://demo.com'
+  },
+  project1: {
+    title: 'E‑commerce (Next.js)',
+    description: 'Nền tảng TMĐT sử dụng Next.js tối ưu SEO, giỏ hàng realtime và thanh toán.',
+    features: ['SEO tốt', 'Giỏ hàng realtime', 'Đánh giá/bình luận', 'Admin dashboard'],
+    technologies: ['Next.js','TypeScript','Tailwind','Stripe','MongoDB'],
+    github: 'https://github.com',
+    demo: 'https://example.com'
+  },
+  project2: {
+    title: 'Learning Management System',
+    description: 'LMS với Nuxt, hỗ trợ video streaming, quiz tương tác, theo dõi tiến độ.',
+    features: ['Video streaming','Quiz tương tác','Theo dõi tiến độ','Chat realtime'],
+    technologies: ['Vue.js','Nuxt','Vuetify','Node.js','PostgreSQL'],
+    github: 'https://github.com',
+    demo: 'https://example.com'
+  },
+  project3: {
+    title: 'Data Analytics (D3.js)',
+    description: 'Phân tích dữ liệu với D3.js, cập nhật realtime, export báo cáo.',
+    features: ['Biểu đồ D3.js','Realtime update','Export PDF','Custom filters'],
+    technologies: ['React','D3.js','Node.js','MongoDB','Redis'],
+    github: 'https://github.com',
+    demo: 'https://example.com'
+  },
+expense: {
+    title: "Expense Tracker App",
+    description: "Ứng dụng quản lý chi tiêu offline-first, lưu SQLite, biểu đồ thống kê theo tháng.",
+    features: [
+      "Thêm/Sửa/Xóa giao dịch",
+      "Phân loại theo danh mục",
+      "Biểu đồ thống kê",
+      "Export CSV"
+    ],
+    technologies: ["Android (Java)", "SQLite", "MPAndroidChart"],
+    github: "https://github.com/yourname/expense-tracker",
+    demo: ""
+  },
+
+  chatapp: {
+    title: "Chat App (Realtime)",
+    description: "Ứng dụng chat realtime dùng Firebase: nhắn tin, gửi ảnh, trạng thái online và thông báo đẩy.",
+    features: [
+      "Chat realtime (Firestore)",
+      "Đăng nhập Firebase Auth",
+      "Gửi ảnh, đổi avatar",
+      "Push Notification"
+    ],
+    technologies: ["Java/Kotlin", "Firebase Auth", "Firestore", "Storage"],
+    github: "https://github.com/yourname/chatapp",
+    demo: ""
+  },
+
+  portfolio: {
+    title: "Portfolio Website",
+    description: "Website cá nhân responsive, dark mode, tối ưu SEO, CI/CD triển khai Vercel.",
+    features: [
+      "Giao diện responsive",
+      "Dark/Light mode",
+      "Tối ưu SEO (Lighthouse > 90)",
+      "CI/CD với Vercel"
+    ],
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
+    github: "https://github.com/yourname/portfolio",
+    demo: "https://yourportfolio.com"
+  }
+};* { font-family: 'Inter', sans-serif; }
+
+.project-card { transition: transform .3s ease, box-shadow .3s ease; }
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(15,76,129,.15); }
+
+.skill-bar { transition: width 1s ease-in-out; }
+
+.glass-effect { backdrop-filter: blur(10px); background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); }
+.dark .glass-effect { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); }
+
+.gradient-text {
+  background: linear-gradient(135deg,#0F4C81,#2E8BC0);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.dark .gradient-text {
+  background: linear-gradient(135deg,#2E8BC0,#7FB6DA);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+
+.hero-bg { background: linear-gradient(135deg,#0F4C81,#2E8BC0); }
+.dark .hero-bg { background: linear-gradient(135deg,#0B172A,#0F4C81); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+// Simple analytics logging — tracking user interactions
+function logEvent(type, detail){
+  console.log(`[Analytics] Event: ${type}`, detail || '');
+  // Bạn có thể thay thế bằng việc gửi lên server hoặc dịch vụ như Google Analytics / Plausible nếu muốn
+  // fetch('/log', { method: 'POST', body: JSON.stringify({type, detail}) });
+}
+
+// Track clicks on mailto: and tel: links
+document.querySelectorAll('a[href^="mailto:"],a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', () => logEvent('contact_click', link.getAttribute('href')));
+});
+
+// Track clicks on GitHub/Demo links trong modal
+document.addEventListener('click', (e) => {
+  if (!e.target.closest) return;
+
+  const githubBtn = e.target.closest('a[href*="github.com"]');
+  if (githubBtn) return logEvent('project_link_click', 'GitHub');
+
+  const demoBtn = e.target.closest('a[href^="http"]:not([href*="github.com"])');
+  if (demoBtn && demoBtn.innerText.includes('Live Demo')) return logEvent('project_link_click', 'Live Demo');
+});
+// Project filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => btn.addEventListener('click', () => {
+  const filter = btn.getAttribute('data-filter');
+
+  filterButtons.forEach(b => {
+    b.classList.remove('active','bg-primary','text-white');
+    b.classList.add('bg-gray-200','dark:bg-gray-700','text-text','dark:text-gray-300');
+  });
+
+  btn.classList.add('active','bg-primary','text-white');
+  btn.classList.remove('bg-gray-200','dark:bg-gray-700','text-text','dark:text-gray-300');
+
+  projectCards.forEach(card => {
+    const tags = (card.getAttribute('data-category') || '').split(' ');
+    if (filter === 'all' || tags.includes(filter)) {
+      card.style.display='block';
+      card.classList.add('animate-fade-in');
+    } else {
+      card.style.display='none';
+      card.classList.remove('animate-fade-in');
+    }
+  });
+}));
+// Contact form validation + UX
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const submitText = document.getElementById('submit-text');
+const submitSpinner = document.getElementById('submit-spinner');
+const formMessage = document.getElementById('form-message');
+
+function validateForm(fd){
+  const errors = {};
+  if(!fd.get('name')?.trim()) errors.name = 'Vui lòng nhập họ tên';
+
+  const email = (fd.get('email') || '').trim();
+  if(!email) errors.email = 'Vui lòng nhập email';
+  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Email không hợp lệ';
+
+  const msg = (fd.get('message') || '').trim();
+  if(!msg) errors.message = 'Vui lòng nhập tin nhắn';
+  else if(msg.length < 10) errors.message = 'Tin nhắn tối thiểu 10 ký tự';
+
+  if(fd.get('honeypot')) errors.spam = 'Spam detected';
+  return errors;
+}
+
+function showFieldError(field, message){
+  const err = document.getElementById(`${field}-error`);
+  const input = document.getElementById(field);
+  if(err && input){
+    err.textContent = message;
+    err.classList.remove('hidden');
+    input.classList.add('border-red-500');
+  }
+}
+
+function clearFieldErrors(){
+  ['name','email','message'].forEach(f=>{
+    const err = document.getElementById(`${f}-error`);
+    const input = document.getElementById(f);
+    if(err) err.classList.add('hidden');
+    if(input) input.classList.remove('border-red-500');
+  });
+}
+
+function showFormMessage(message, isError=false){
+  formMessage.textContent = message;
+  formMessage.className = `text-center ${isError ? 'text-red-500' : 'text-green-500'}`;
+  formMessage.classList.remove('hidden');
+  setTimeout(()=>formMessage.classList.add('hidden'), 5000);
+}
+
+let lastSubmission = 0;
+const RATE_LIMIT = 60000;
+
+form?.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const now = Date.now();
+  if(now - lastSubmission < RATE_LIMIT){
+    showFormMessage('Vui lòng đợi 1 phút trước khi gửi lại.', true);
+    return;
+  }
+
+  clearFieldErrors();
+  const fd = new FormData(form);
+  const errors = validateForm(fd);
+
+  if(Object.keys(errors).length){
+    Object.entries(errors).forEach(([k,v])=>{ if(k!=='spam') showFieldError(k,v); });
+    if(errors.spam) showFormMessage('Có lỗi xảy ra, vui lòng thử lại.', true);
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitText.textContent = 'Đang gửi...';
+  submitSpinner.classList.remove('hidden');
+
+  try {
+    // TODO: Thay bằng endpoint thật
+    await new Promise(r=>setTimeout(r,1500));
+    lastSubmission = now;
+    form.reset();
+    showFormMessage('Cảm ơn bạn! Tin nhắn đã được gửi thành công.');
+  } catch(err){
+    console.error(err);
+    showFormMessage('Có lỗi khi gửi tin nhắn. Vui lòng thử lại.', true);
+  } finally {
+        submitBtn.disabled = false;
+        submitText.textContent = 'Gửi tin nhắn';
+        submitSpinner.classList.add('hidden');
+      }
+    });// Custom Tailwind config for CDN build
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0F4C81',
+        primaryHover: '#093459',
+        accent: '#2E8BC0',
+        bgLight: '#F5F7FA',
+        bgDark: '#0B172A',
+        text: '#1C1C1C',
+        textSecondary: '#6B7280',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'slide-in-left': 'slideInLeft 0.6s ease-out',
+        'slide-in-right': 'slideInRight 0.6s ease-out',
+        'bounce-gentle': 'bounceGentle 2s infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        fadeIn: { '0%': {opacity:0, transform:'translateY(20px)'}, '100%': {opacity:1, transform:'translateY(0)'} },
+        slideUp: { '0%': {opacity:0, transform:'translateY(30px)'}, '100%': {opacity:1, transform:'translateY(0)'} },
+        slideInLeft: { '0%': {opacity:0, transform:'translateX(-30px)'}, '100%': {opacity:1, transform:'translateX(0)'} },
+        slideInRight: { '0%': {opacity:0, transform:'translateX(30px)'}, '100%': {opacity:1, transform:'translateX(0)'} },
+        bounceGentle: { '0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-10px)'} },
+        float: { '0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-20px)'} },
+        glow: { '0%': { boxShadow:'0 0 20px rgba(15,76,129,0.45)' }, '100%': { boxShadow:'0 0 30px rgba(46,139,192,0.75)'} },
+      }
+    }
+  }
+}
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.classList.toggle('dark', savedTheme === 'dark');
+
+themeToggle?.addEventListener('click', () => {
+  html.classList.toggle('dark');
+  localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+});
+
+// Mobile menu toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuToggle?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
+mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+// Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});    <!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trần Đăng Khoa</title>
+  <meta name="description" content="Trần Đăng Khoa — Software Engineering Intern Portfolio. Sinh viên Công nghệ Thông tin | Software Engineering Intern." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Trần Đăng Khoa — Software Engineering Intern Portfolio" />
+  <meta property="og:description" content="Sinh viên Công nghệ Thông tin | Software Engineering Intern." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourportfolio.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind config (tách riêng) -->
+  <script src="/assets/js/tailwind-config.js"></script>
+
+  <!-- Icons + Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body class="bg-bgLight dark:bg-bgDark text-text dark:text-white transition-colors duration-300">
+  <!-- Skip to main content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-md z-50">Bỏ qua đến nội dung chính</a>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-40 glass-effect">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold gradient-text">Profile</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Trang chủ</a>
+        <a href="#skills" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Kỹ năng</a>
+        <a href="#projects" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Dự án</a>
+        <a href="#contact" class="hover:text-primary dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1">Liên hệ</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" class="p-2 rounded-lg hover:bg-white/40 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Chuyển chế độ tối">
+          <i class="fas fa-moon dark:hidden"></i>
+          <i class="fas fa-sun hidden dark:block"></i>
+        </button>
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-white/40 dark:hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Mở menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-bgLight dark:bg-gray-800 border-t border-white/10 dark:border-white/10">
+      <div class="px-4 py-2 space-y-2">
+        <a href="#hero" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Trang chủ</a>
+        <a href="#skills" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Kỹ năng</a>
+        <a href="#projects" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Dự án</a>
+        <a href="#contact" class="block py-2 hover:text-primary dark:hover:text-accent transition-colors">Liên hệ</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex items-center justify-center hero-bg relative overflow-hidden pt-16">
+      <!-- soft floating blobs -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-white rounded-full animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full animate-float" style="animation-delay:1s"></div>
+      </div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="animate-fade-in">
+          <!-- Avatar -->
+          <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-2xl animate-glow flex items-center justify-center bg-gradient-to-br from-primary to-accent text-white text-4xl font-bold">NA</div>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-slide-up">Trần Đăng Khoa</h1>
+          <p class="text-xl md:text-2xl text-white/90 mb-6 animate-slide-up" style="animation-delay:.15s">Sinh viên Công nghệ Thông tin | Software Engineering Intern</p>
+          <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto animate-slide-up" style="animation-delay:.3s">Sinh viên năm 3 Công nghệ Thông tin, có kinh nghiệm thực hành React, Node.js, Android (Java).
+  Mong muốn tham gia kỳ thực tập để áp dụng kiến thức và học hỏi từ môi trường doanh nghiệp.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay:.45s">
+            <a href="#projects" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50">Xem dự án</a>
+            <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50">Liên hệ</a>
+            <a href="/cv.pdf" download class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 flex items-center justify-center gap-2"><i class="fas fa-download"></i>Tải CV</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-gentle">
+        <a href="#skills" class="text-white hover:text-gray-200" aria-label="Cuộn xuống phần kỹ năng"><i class="fas fa-chevron-down text-2xl"></i></a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+<section id="skills" class="py-20 bg-white/60 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text animate-slide-up">Kỹ năng & Chuyên môn</h2>
+      <p class="text-textSecondary dark:text-gray-300 max-w-2xl mx-auto animate-slide-up" style="animation-delay:.15s">
+        Mức độ thành thạo & trải nghiệm thực tế (không dùng số %)
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 1) Programming & Mobile -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-mobile-alt text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Programming & Mobile</h3>
+        </div>
+
+        <!-- Java -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-java"></i><span class="font-medium">Java</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            OOP, REST API cơ bản, unit test, error handling.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">2 projects</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Collections/I/O</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Gradle/Maven</span>
+          </div>
+        </div>
+
+        <!-- Android -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-robot"></i><span class="font-medium">Android (Java)</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            SQLite, RecyclerView, ViewModel/Lifecycle, form validation.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">1 app hoàn chỉnh</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Offline-first</span>
+          </div>
+        </div>
+
+        <!-- Git -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-git-alt"></i><span class="font-medium">Git/GitHub</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Advanced</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Git flow, PR review, branching, basic GitHub Actions.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">>20 PRs</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Code Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Frontend -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fab fa-react text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Frontend</h3>
+        </div>
+
+        <!-- React/Next -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-react"></i><span class="font-medium">React / Next.js</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Advanced</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            SPA/SSR, routing, hooks, tối ưu hiệu năng & SEO.
+          </p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">3 projects</span>
+            <span class="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">Auth • Forms • API</span>
+          </div>
+        </div>
+
+        <!-- TypeScript -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-code"></i><span class="font-medium">TypeScript</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Types, generics, strict mode, lint & refactor an toàn.
+          </p>
+        </div>
+
+        <!-- Vue/Nuxt -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-vuejs"></i><span class="font-medium">Vue / Nuxt</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Familiar</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Composition API, file-based routing, server routes.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3) Backend & DevOps -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-server text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Backend & DevOps</h3>
+        </div>
+
+        <!-- Node/Express -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-node-js"></i><span class="font-medium">Node.js / Express</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            REST API, auth (JWT), middleware, validation, logging.
+          </p>
+        </div>
+
+        <!-- DB -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-database"></i><span class="font-medium">MongoDB / PostgreSQL</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Thiết kế schema, index cơ bản, ORM/ODM, query tối ưu nhẹ.
+          </p>
+        </div>
+
+        <!-- DevOps -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fab fa-docker"></i><span class="font-medium">AWS · Docker · CI/CD</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Familiar</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Dockerize app, deploy cơ bản (EC2/Vercel), pipeline CI/CD đơn giản.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4) Styling -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-paint-brush text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Styling</h3>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-wand-magic-sparkles"></i><span class="font-medium">Tailwind CSS</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Advanced</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Design system, responsive, dark mode, component-first.
+          </p>
+        </div>
+
+        <!-- CSS/SCSS -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-hashtag"></i><span class="font-medium">CSS / SCSS</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Flex/Grid, animation, accessible focus states.
+          </p>
+        </div>
+
+        <!-- Framer Motion -->
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-bolt"></i><span class="font-medium">Framer Motion</span>
+            </div>
+            <span class="px-2 py-0.5 text-xs rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">Familiar</span>
+          </div>
+          <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+            Reveal/entrance, layout animation, gestures cơ bản.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6) Testing & QA -->
+<div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+  <div class="flex items-center mb-4">
+    <i class="fas fa-vial text-3xl text-accent mr-3"></i>
+    <h3 class="text-xl font-semibold">Testing & QA</h3>
+  </div>
+
+  <div class="space-y-5">
+    <div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium"><i class="fas fa-check-circle mr-2"></i>Unit Testing</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Proficient</span>
+      </div>
+      <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+        JUnit, Mockito, test coverage cơ bản.
+      </p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium"><i class="fas fa-bug mr-2"></i>Debugging</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Strong</span>
+      </div>
+      <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+        Phân tích log, breakpoint, fix bug theo priority.
+      </p>
+    </div>
+
+    <div>
+      <div class="flex items-center justify-between">
+        <span class="font-medium"><i class="fas fa-clipboard-check mr-2"></i>Code Quality</span>
+        <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Good</span>
+      </div>
+      <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+        Code review, lint, refactor để giữ clean code.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- 5) Soft Skills -->
+      <div class="bg-bgLight dark:bg-bgDark p-6 rounded-xl shadow-lg animate-slide-up">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-user-friends text-3xl text-accent mr-3"></i>
+          <h3 class="text-xl font-semibold">Soft Skills</h3>
+        </div>
+
+        <div class="space-y-5">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium"><i class="fas fa-users mr-2"></i>Teamwork</span>
+              <span class="px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300">Strong</span>
+            </div>
+            <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+              Làm việc nhóm với GitHub/Trello; giao tiếp, phân chia task rõ ràng.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium"><i class="fas fa-comment-dots mr-2"></i>Communication</span>
+              <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Good</span>
+            </div>
+            <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+              Báo cáo tiến độ, viết README, trình bày giải pháp ngắn gọn.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-medium"><i class="fas fa-lightbulb mr-2"></i>Problem‑solving</span>
+              <span class="px-2 py-0.5 text-xs rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Good</span>
+            </div>
+            <p class="text-sm text-textSecondary dark:text-gray-400 mt-1">
+              Phân tích yêu cầu, debug có hệ thống, ưu tiên giải pháp đơn giản trước.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 bg-bgLight dark:bg-bgDark">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text animate-slide-up">Dự án tiêu biểu</h2>
+          <p class="text-textSecondary dark:text-gray-300 max-w-2xl mx-auto animate-slide-up" style="animation-delay:.15s">Tuyển tập các sản phẩm gần đây</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up" style="animation-delay:.3s">
+          <button class="filter-btn active px-5 py-2 rounded-full bg-primary text-white hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-primary" data-filter="all">Tất cả</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="react">React</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="vue">Vue</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-text dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary" data-filter="mobile">Mobile</button>
+        </div>
+
+        <!-- Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Cards (giữ onclick để mở modal) -->
+          <!-- E-Commerce Platform -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="react fullstack" data-tags="react,fullstack" onclick="openProjectModal('ecommerce')">
+            <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center"><i class="fas fa-shopping-cart text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3><p class="text-textSecondary dark:text-gray-300">Giải pháp TMĐT full-stack: xác thực, giỏ hàng, thanh toán Stripe, quản lý đơn.</p></div>
+          </div>
+
+          <!-- Task Management App -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="react mobile" data-tags="react,frontend" onclick="openProjectModal('taskmanager')">
+            <div class="h-48 bg-gradient-to-br from-accent to-primary flex items-center justify-center"><i class="fas fa-tasks text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Task Management App</h3><p class="text-textSecondary dark:text-gray-300">Ứng dụng quản lý công việc realtime, PWA, kéo-thả.</p></div>
+          </div>
+
+          <!-- Analytics Dashboard -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="fullstack react" data-tags="fullstack,react" onclick="openProjectModal('analytics')">
+            <div class="h-48 bg-gradient-to-br from-primary via-accent to-primary flex items-center justify-center"><i class="fas fa-chart-line text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3><p class="text-textSecondary dark:text-gray-300">Dashboard phân tích realtime, biểu đồ tương tác, báo cáo.</p></div>
+          </div>
+
+          <!-- E-commerce (Next.js) -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="react" data-tags="react,frontend" onclick="openProjectModal('project1')">
+            <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center"><i class="fas fa-laptop-code text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">E-commerce (Next.js)</h3><p class="text-textSecondary dark:text-gray-300">Nền tảng TMĐT với Next.js, SEO tốt, giỏ hàng realtime.</p></div>
+          </div>
+
+          <!-- Learning Management -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="vue" data-tags="vue,frontend" onclick="openProjectModal('project2')">
+            <div class="h-48 bg-gradient-to-br from-accent to-primary flex items-center justify-center"><i class="fas fa-graduation-cap text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Learning Management</h3><p class="text-textSecondary dark:text-gray-300">LMS với Nuxt, video streaming, quiz tương tác.</p></div>
+          </div>
+
+          <!-- Data Analytics -->
+          <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden" data-category="fullstack" data-tags="fullstack,react" onclick="openProjectModal('project3')">
+            <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center"><i class="fas fa-database text-6xl text-white opacity-90"></i></div>
+            <div class="p-6"><h3 class="text-xl font-bold mb-2">Data Analytics</h3><p class="text-textSecondary dark:text-gray-300">Phân tích dữ liệu với D3.js, export PDF, multi sources.</p></div>
+          </div>
+          
+          <!-- Expense Tracker App (Mobile) -->
+<div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+     data-category="mobile" data-tags="android,java,sqlite" onclick="openProjectModal('expense')">
+  <div class="h-48 bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+    <i class="fas fa-wallet text-6xl text-white opacity-90"></i>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">Expense Tracker App</h3>
+    <p class="text-textSecondary dark:text-gray-300">
+      Ứng dụng quản lý chi tiêu offline-first, lưu SQLite, biểu đồ thống kê.
+    </p>
+  </div>
+</div>
+
+<!-- Chat App (Realtime) -->
+<div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+     data-category="mobile" data-tags="firebase,realtime,java,kotlin" onclick="openProjectModal('chatapp')">
+  <div class="h-48 bg-gradient-to-br from-primary via-accent to-primary flex items-center justify-center">
+    <i class="fas fa-comments text-6xl text-white opacity-90"></i>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">Chat App (Realtime)</h3>
+    <p class="text-textSecondary dark:text-gray-300">
+      Chat realtime Firebase (Auth, Firestore, Storage), gửi ảnh, thông báo đẩy.
+    </p>
+  </div>
+</div>
+
+<!-- Portfolio Website -->
+<div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+     data-category="react" data-tags="nextjs,tailwind,vercel" onclick="openProjectModal('portfolio')">
+  <div class="h-48 bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+    <i class="fas fa-globe text-6xl text-white opacity-90"></i>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+    <p class="text-textSecondary dark:text-gray-300">
+      Website cá nhân responsive, dark mode, tối ưu SEO, triển khai Vercel.
+    </p>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+<section id="contact" class="py-20 bg-white/60 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 gradient-text">Liên hệ</h2>
+      <p class="text-textSecondary dark:text-gray-300 max-w-2xl mx-auto">Hãy cùng bàn về dự án tiếp theo của bạn!</p>
+    </div>
+
+    <div class="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Info -->
+      <div class="bg-bgLight dark:bg-bgDark rounded-xl p-6 shadow-sm">
+        <h3 class="text-2xl font-bold mb-6">Kết nối với tôi</h3>
+
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-primary/90 text-white flex items-center justify-center">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold">Email</h4>
+              <a href="mailto:trandangkhoa2020tb@gmail.com"
+                 class="text-textSecondary dark:text-gray-300 hover:text-primary dark:hover:text-accent underline-offset-2 hover:underline">
+                trandangkhoa2020tb@gmail.com
+              </a>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-primary/90 text-white flex items-center justify-center">
+              <i class="fas fa-phone"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold">Điện thoại</h4>
+              <a href="tel:+84907089280"
+                 class="text-textSecondary dark:text-gray-300 hover:text-primary dark:hover:text-accent">
+                +84 907 089 280
+              </a>
+            </div>
+          </li>
+
+          <li class="flex items-start gap-4">
+            <span class="w-12 h-12 shrink-0 rounded-xl bg-primary/90 text-white flex items-center justify-center">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold">Khu vực</h4>
+              <p class="text-textSecondary dark:text-gray-300">Hồ Chí Minh, Việt Nam</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-8">
+          <h4 class="font-semibold mb-3">Theo dõi tôi</h4>
+          <div class="flex gap-3">
+            <a href="https://github.com/dkhoa05" target="_blank" aria-label="GitHub"
+               class="w-10 h-10 rounded-lg bg-gray-900 text-white flex items-center justify-center hover:opacity-90">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/khoa-%C4%91%C4%83ng-0065a0371/" target="_blank" aria-label="LinkedIn"
+               class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center hover:bg-primaryHover">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:trandangkhoa2020tb@gmail.com" aria-label="Email"
+               class="w-10 h-10 rounded-lg bg-accent text-white flex items-center justify-center hover:opacity-90">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="bg-bgLight dark:bg-bgDark rounded-xl p-6 shadow-sm">
+        <form id="contact-form" class="space-y-5" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="honeypot" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Họ tên <span class="text-red-500">*</span></label>
+            <input id="name" name="name" type="text" required
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                          focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+                   autocomplete="name" />
+            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Vui lòng nhập họ tên.</p>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email <span class="text-red-500">*</span></label>
+            <input id="email" name="email" type="email" required
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                          focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+                   autocomplete="email" />
+            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Vui lòng nhập email hợp lệ.</p>
+          </div>
+
+          <div>
+            <label for="subject" class="block text-sm font-medium mb-2">Chủ đề</label>
+            <input id="subject" name="subject" type="text"
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                          focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium mb-2">Tin nhắn <span class="text-red-500">*</span></label>
+            <textarea id="message" name="message" rows="6" required
+                      class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800
+                             focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition resize-y"></textarea>
+            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Vui lòng nhập nội dung.</p>
+          </div>
+
+          <div class="flex items-center justify-between">
+            <p id="form-message" class="text-sm hidden" aria-live="polite"></p>
+            <button id="submit-btn" type="submit"
+                    class="ml-auto inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg
+                           hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-primary/40
+                           disabled:opacity-60 disabled:cursor-not-allowed">
+              <i id="submit-spinner" class="fas fa-spinner fa-spin hidden"></i>
+              <span id="submit-text">Gửi tin nhắn</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-bgDark text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-2 gradient-text">Trần Đăng Khoa</h3>
+      <p class="text-white/70 mb-6">Information Technology</p>
+      <div class="flex justify-center space-x-6 mb-6">
+<a href="https://github.com/dkhoa05" target="_blank" rel="noopener noreferrer" ...>
+        <a href="https://www.linkedin.com/in/khoa-%C4%91%C4%83ng-0065a0371/" target="_blank" class="text-white/70 hover:text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
+        <a href="mailto:trandangkhoa2020tb@gmail.com" class="text-white/70 hover:text-white" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
+      </div>
+<div class="border-t border-white/10 pt-6 text-white/60">
+  © <span id="y"></span> Trần Đăng Khoa. Tất cả quyền được bảo lưu.
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    </div>
+    <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primaryHover text-white">
+  <i class="fas fa-paper-plane"></i> Liên hệ
+</a>
+
+  </footer>
+
+  <!-- Project Modal (one modal for all) -->
+  <div id="project-modal" role="dialog" aria-modal="true" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="modal-title" class="text-2xl font-bold"></h3>
+          <button id="close-modal" class="text-textSecondary dark:text-gray-400 hover:text-text dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary rounded" aria-label="Đóng modal"><i class="fas fa-times text-xl"></i></button>
+        </div>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts (theo thứ tự) -->
+  <script src="/assets/js/data/projects.js"></script>
+  <script src="/assets/js/ui.js"></script>
+  <script src="/assets/js/filter.js"></script>
+  <script src="/assets/js/modal.js"></script>
+  <script src="/assets/js/form.js"></script>
+  <script src="/assets/js/analytics.js"></script>
+  <script defer src="/assets/js/data/projects.js"></script>
+  <script defer src="/assets/js/ui.js"></script>
+  <script defer src="/assets/js/filter.js"></script>
+  <script defer src="/assets/js/modal.js"></script>
+  <script defer src="/assets/js/form.js"></script>
+  <script defer src="/assets/js/analytics.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+</body>
+</html>
+ full project nè xe, ok chưa
